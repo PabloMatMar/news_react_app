@@ -4,7 +4,7 @@ import { userContext } from '../../../context/userContext';
 
 class Nav extends Component {
   render() {
-    return <div><nav>
+    return <nav className="nav">
       <button>
       <Link to="/form"> addNew </Link>
       </button>
@@ -14,16 +14,18 @@ class Nav extends Component {
       <button>
         <Link to="/"> Home </Link>
       </button>
-    </nav>
+      <br />
     <userContext.Consumer>
         {({ logout, user }) => user.username ?
-          <span>
-          <p>Hello, {user.username}!</p><br />
+          <span className="flexBoxButton">
+          Hello, {user.username}!
           <button variant="contained" size="small" onClick={logout}>Logout</button></span>
           : ""
         }
       </userContext.Consumer>
-    </div>;
+
+      </nav>
+
   }
 }
 

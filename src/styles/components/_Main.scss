@@ -1,0 +1,112 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+
+
+
+img {
+    width: 60%;
+}
+
+section {
+    text-align: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div {
+    border: 3px black solid;
+    border-radius: 15px;
+    gap: 50px;
+    background-color: grey;
+    width: 100%;
+
+    >p {
+        font-family: italic;
+
+    }
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 15vh;
+    color: black;
+    background-color: $light-blue;
+    margin: 0px;
+    background-image: url(https://cdn.pixabay.com/photo/2016/02/01/00/56/news-1172463_1280.jpg);
+}
+
+@media only screen and (min-width: 576px) {
+
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+
+
+    .main {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+
+}

@@ -1,1 +1,1 @@
-# news_react_app
+# News_react_app

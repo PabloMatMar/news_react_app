@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen } from '@testing-library/react';
-import Footer from "./Footer";
+import Form from "./Form";
 
-describe("Footer", () => {
+describe("Form", () => {
   test("matches snapshot", () => {
-    render(<Footer />);
+    render(<Form />);
     expect(screen).toMatchSnapshot();
   });
 });

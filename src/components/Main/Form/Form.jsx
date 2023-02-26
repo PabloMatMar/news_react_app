@@ -23,12 +23,14 @@ class Form extends Component {
     const abstract = e.target.newText.value;
     const image = e.target.image.value;
     const urlNew = e.target.urlNew.value;
+    const date = e.target.date.value;
 
     const newIntroducedByForm = {
       title: title,
       abstract: abstract,
       multimedia: ["", "", image],
-      url: urlNew
+      url: urlNew,
+      published_date: date
     }
     e.target.title.value = ''
     e.target.newText.value = ''
@@ -41,26 +43,29 @@ class Form extends Component {
 
 
   render() {
-    return this.state.cycleLifeCompleted ? <Navigate to='/list' /> : <section>
+    return this.state.cycleLifeCompleted ? <Navigate to='/list' /> : <article>
 
       <form onSubmit={this.handleSubmit}>
 
-        <label htmlFor="title">title:</label><br />
-        <input type="text" name="title" placeholder="Title" /><br />
+        <label htmlFor="title">title:</label>
+        <input type="text" name="title" placeholder="Title" />
 
         <p><label htmlFor="newText">Enter your new:</label></p>
-        <textarea name="newText"  rows="4" cols="50" placeholder="your new" ></textarea><br />
+        <textarea name="newText"  rows="4" cols="50" placeholder="your new" minLength="25" maxLength="400"></textarea>
 
-        <label htmlFor="image">URL image:</label><br />
-        <input type="url" name="image" placeholder="url imagen" /><br />
+        <label htmlFor="image">URL image:</label>
+        <input type="url" name="image" placeholder="url imagen" />
 
-        <label htmlFor="urlNew">URL new </label><br />
-        <input type="url" name="urlNew" placeholder="url new" /><br />
+        <label htmlFor="urlNew">URL new:</label>
+        <input type="url" name="urlNew" placeholder="url new" />
+
+        <label htmlFor="date">Date of the new:</label>
+        <input type="date" name="date" placeholder="date of the New" />
         <button type="submit">Send</button>
       </form>
 
 
-    </section>
+    </article>
 
   }
 }

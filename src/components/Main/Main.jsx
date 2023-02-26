@@ -16,7 +16,8 @@ class Main extends Component {
   siblingDataForm = (newIntroducedByForm) => this.setState({newIntroducedByForm })
 
   render() {
-    return <main>
+    return <main className="main">
+      <section>
       <Routes>
         <Route path="/list" element={<ListNews  newIntroducedByForm={this.state.newIntroducedByForm}/>} />
         <Route path="/" element={<Home />} />
@@ -24,6 +25,7 @@ class Main extends Component {
 
         <Route path="/*" element={<NotFound />} />
       </Routes>
+      </section>
     </main>;
   }
 }

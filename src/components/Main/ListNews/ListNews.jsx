@@ -36,7 +36,7 @@ class ListNews extends Component {
   }
 
   printCards = () => {
-    return <section> {this.state.news.map((news, i) => <Card data={news} remove={() => this.deleteNew(i)} key={uuidv4()} />)}</section>
+    return <> {this.state.news.map((news, i) => <Card data={news} remove={() => this.deleteNew(i)} key={uuidv4()} />)}</>
   }
 
   printOptions = () => {
@@ -53,7 +53,7 @@ class ListNews extends Component {
 
   render() {
     return (
-      <section>
+      <>
         <article>
           <form >
             <label htmlFor="category">Choose a category:</label>
@@ -63,10 +63,9 @@ class ListNews extends Component {
           </form>
         </article>
         <article>
-          <h3>News</h3>
           {this.printCards()}
         </article>
-      </section>
+      </>
     )
   }
 }

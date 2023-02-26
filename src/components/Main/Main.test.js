@@ -1,10 +1,19 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from '@testing-library/react';
 import Main from "./Main";
+import { BrowserRouter } from 'react-router-dom';
+
 
 describe("Main", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Main />);
-    expect(wrapper).toMatchSnapshot();
+    siblingDataForm = (newIntroducedByForm) => this.setState({newIntroducedByForm })
+    const newIntroducedByForm = {}
+    render(
+      <BrowserRouter>
+
+      <Main newIntroducedByForm= {newIntroducedByForm} catchData={siblingDataForm}/>
+      </BrowserRouter>
+    );
+    expect(screen).toMatchSnapshot();
   });
 });

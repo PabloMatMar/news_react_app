@@ -1,10 +1,27 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from '@testing-library/react';
 import Nav from "./Nav";
+import { BrowserRouter } from 'react-router-dom';
+import { userContext } from '../../../context/userContext';
 
 describe("Nav", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Nav />);
-    expect(wrapper).toMatchSnapshot();
+
+    let user = "";
+    const login = (name) => setUser(name); 
+    const logout = () => setUser("");
+
+    const dataForTest = {
+      user,
+      login,
+      logout
+    }
+    render(
+      <BrowserRouter>
+      <userContext.Provider value={dataForTest}>
+        <Nav />
+      </userContext.Provider>
+      </BrowserRouter>);
+    expect(screen).toMatchSnapshot();
   });
 });

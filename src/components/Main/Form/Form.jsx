@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 
-class Home extends Component {
+class Form extends Component {
+
 
 
   constructor(props) {
     super(props)
+
 
     this.state = {
 
@@ -13,12 +15,14 @@ class Home extends Component {
 
 
 
-
   render() {
-    return <div>
-      <p>Home</p>
-    </div>;
+    return <section>
+
+      <p>form</p>
+
+    </section>
+
   }
 }
 
-export default Home;
+export default Form;

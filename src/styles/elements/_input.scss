@@ -1,0 +1,19 @@
+@import '../utils/variables.scss';
+input{
+    border-radius: 15px;
+    padding:5px;
+    background-color: $light-blue;
+};
+
+textarea {
+    border-radius: 15px;
+    padding:5px;
+    background-color: $light-blue;
+
+}
+
+select {
+    border-radius: 15px;
+    padding:5px;
+    background-color: $light-blue;
+}

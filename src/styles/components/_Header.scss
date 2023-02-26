@@ -1,0 +1,13 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:15vh;
+    color:black;
+    background-color:$grey;
+    border-radius: 15px;
+    padding:5px;
+}

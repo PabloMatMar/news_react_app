@@ -38,14 +38,14 @@ class Home extends Component {
 
 
   render() {
-    return <div>
+    return <>
       <form>
         <label htmlFor="name">Name:</label><br />
         <input type="text" ref={this.username} placeholder="Name user" onChange={this.handleChange} /><br />
 
         {this.state.user.username ? <button type="submit" onClick={this.sendName}>Login</button> : ""}
       </form>
-    </div>;
+    </>;
   }
 }
 

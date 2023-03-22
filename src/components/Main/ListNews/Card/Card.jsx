@@ -22,7 +22,7 @@ class Card extends Component {
 
           <button onClick={this.props.remove}>Delete</button>
         </> :
-        <></>
+        <>ARREGLAR ERROR ESTA PINTANDO UN DIV DE MAS (EL RENDER EXTRA...)</>
       }
     </div>
 

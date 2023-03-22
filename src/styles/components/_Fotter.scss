@@ -2,9 +2,7 @@
 @import '../utils/mixins.scss';
 
 .footer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    @include row-center;
     min-height:15vh;
     color:black;
     background-color:$grey;

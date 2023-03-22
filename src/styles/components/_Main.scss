@@ -2,8 +2,6 @@
 @import '../utils/mixins.scss';
 
 
-
-
 img {
     width: 60%;
 }
@@ -13,20 +11,14 @@ section {
 }
 
 article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include column-center;
     gap: 20px;
 
     width: 100%;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include column-center;
 
 }
 
@@ -45,9 +37,7 @@ div {
 
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include row-center;
     min-height: 15vh;
     color: black;
     background-color: $light-blue;
@@ -59,10 +49,7 @@ div {
 
 
     article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include column-center;
         gap: 50px;
     }
 
@@ -78,10 +65,7 @@ div {
 
 
     article {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include row-center;
         gap: 50px;
     }
 
@@ -100,10 +84,7 @@ div {
 @media only screen and (min-width: 992px) {
 
     article {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include row-center;
         gap: 50px;
     }
 
